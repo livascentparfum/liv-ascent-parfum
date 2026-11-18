@@ -1,0 +1,32 @@
+name: Unzip site
+on:
+  push:
+    paths:
+      - 'preview-netlify.zip'
+permissions:
+  contents: write
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract site files
+        run: |
+          if [ ! -f preview-netlify.zip ]; then
+            echo "No zip file to extract, nothing to do."
+            exit 0
+          fi
+          unzip -o preview-netlify.zip
+          if [ -d preview-netlify ]; then
+            shopt -s dotglob
+            mv preview-netlify/* .
+            rmdir preview-netlify
+          fi
+          rm -f preview-netlify.zip
+      - name: Commit extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish site files from preview-netlify.zip" || echo "Nothing to commit"
+          git push
