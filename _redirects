@@ -1,0 +1,9 @@
+# URLs limpias para la vista previa en Netlify (el .htaccess no funciona aquí)
+/catalogo /catalogo.html 200
+/nosotros /nosotros.html 200
+/producto /producto.html 200
+/pago /pago.html 200
+/preguntas-frecuentes /preguntas-frecuentes.html 200
+/envios-devoluciones /envios-devoluciones.html 200
+/terminos-condiciones /terminos-condiciones.html 200
+/politica-privacidad /politica-privacidad.html 200

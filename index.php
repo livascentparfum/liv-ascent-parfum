@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LIV ASCENT PARFUM</title>
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Allura&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/banners.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+<!-- Preloader -->
+<style>
+.preloader{position:fixed;inset:0;z-index:9999;background:#0b0b0b;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}
+.preloader-inner{text-align:center;padding:20px}
+.preloader-logo{width:180px;max-width:60vw;height:auto;display:block;margin:0 auto 24px}
+.preloader-line{width:180px;max-width:60vw;height:2px;background:rgba(200,169,107,.25);margin:0 auto;overflow:hidden;border-radius:2px}
+.preloader-line span{display:block;height:100%;width:40%;background:#c8a96b;animation:preload-line 1.2s ease-in-out infinite}
+@keyframes preload-line{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+.preloader-tagline{font-family:'Allura','Great Vibes',cursive;color:#d9b878;font-size:1.6rem;margin:18px 0 0}
+.preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+@media (prefers-reduced-motion: reduce){.preloader-line span{animation:none;width:100%}}
+</style>
+
+</head>
+
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" data-min="2500" aria-hidden="true">
+    <div class="preloader-inner">
+        <img src="assets/logo/logo-lockup.webp" alt="Liv Ascent Parfum" class="preloader-logo">
+        <div class="preloader-line"><span></span></div>
+        <p class="preloader-tagline">Eleva tu esencia</p>
+    </div>
+</div>
+<script src="js/preloader.js"></script>
+
+<!-- TOP BAR -->
+
+<div class="top-sticky">
+<div class="announce-bar">
+    <div class="announce-track">
+        <span class="announce-item"><span class="announce-pill">EXCLUSIVO</span> Perfumes 100% originales ✨ Envíos a todo el Perú <a href="catalogo">Ver catálogo →</a><span class="announce-sep">•</span> <span class="announce-pill">EXCLUSIVO</span> Perfumes 100% originales ✨ Envíos a todo el Perú <a href="catalogo">Ver catálogo →</a><span class="announce-sep">•</span> <span class="announce-pill">EXCLUSIVO</span> Perfumes 100% originales ✨ Envíos a todo el Perú <a href="catalogo">Ver catálogo →</a><span class="announce-sep">•</span></span>
+        <span class="announce-item"><span class="announce-pill">EXCLUSIVO</span> Perfumes 100% originales ✨ Envíos a todo el Perú <a href="catalogo">Ver catálogo →</a><span class="announce-sep">•</span> <span class="announce-pill">EXCLUSIVO</span> Perfumes 100% originales ✨ Envíos a todo el Perú <a href="catalogo">Ver catálogo →</a><span class="announce-sep">•</span> <span class="announce-pill">EXCLUSIVO</span> Perfumes 100% originales ✨ Envíos a todo el Perú <a href="catalogo">Ver catálogo →</a><span class="announce-sep">•</span></span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú">☰ <span>MENÚ</span></button>
+
+    <div class="logo">
+
+        <a href="./" aria-label="Ir al inicio"><img src="assets/logo/logo-lockup.webp"
+             alt="LIV ASCENT PARFUM"></a>
+
+    </div>
+
+    <nav>
+
+        <a href="#">Inicio</a>
+        <a href="catalogo">Tienda</a>
+        <a href="#marcas">Marcas</a>
+        <a href="nosotros">Nosotros</a>
+        <a href="https://wa.me/51936751504" target="_blank" rel="noopener">Contacto</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            placeholder="Buscar perfumes...">
+        <button class="search-btn" id="search-btn" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
+
+    </div>
+
+        <button class="icon-btn cart-btn" id="cart-open-btn" type="button" aria-label="Ver carrito">
+
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+</div>
+
+
+<!-- DRAWER MENÚ MÓVIL -->
+
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Menú">
+    <div class="drawer-head">
+        <img src="assets/logo/logo-lockup.webp" alt="Liv Ascent Parfum">
+        <button class="drawer-close" id="drawer-close-btn" type="button" aria-label="Cerrar menú">✖</button>
+    </div>
+    <nav class="drawer-nav">
+        <a href="#" onclick="closeDrawer();window.scrollTo({top:0,behavior:'smooth'});return false;">Inicio</a>
+        <a href="catalogo" onclick="closeDrawer()">Tienda</a>
+        <a href="#marcas" onclick="closeDrawer()">Marcas</a>
+        <a href="nosotros" onclick="closeDrawer()">Nosotros</a>
+        <a href="https://wa.me/51936751504" target="_blank" rel="noopener" onclick="closeDrawer()">Contacto</a>
+    </nav>
+    <div class="drawer-section">
+        <h4>Ayuda</h4>
+        <a href="preguntas-frecuentes">Preguntas frecuentes</a>
+        <a href="envios-devoluciones">Cambios y devoluciones</a>
+        <a href="terminos-condiciones">Términos y condiciones</a>
+        <a href="politica-privacidad">Política de privacidad</a>
+    </div>
+    <p class="drawer-foot">Liv Ascent Parfum • Ica, Perú</p>
+</aside>
+
+<!-- HERO CAROUSEL -->
+
+<section class="hero-section">
+
+<div class="swiper heroSwiper">
+
+<div class="swiper-wrapper">
+
+<!-- SLIDE -->
+
+<div class="swiper-slide hero-slide">
+
+    <img class="hero-bg" src="assets/hero/marca-wide.webp" alt="Liv Ascent Parfum - Perfumes árabes">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            Eleva tu esencia
+        </span>
+
+        <h1>LIV ASCENT PARFUM</h1>
+
+        <p>
+            Las fragancias más reconocidas del mundo árabe, 100% originales.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- SLIDE -->
+
+<div class="swiper-slide hero-slide">
+
+    <img class="hero-bg" src="assets/hero/khamrah-wide.webp" alt="Khamrah Lattafa">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            Lattafa
+        </span>
+
+        <h1>KHAMRAH</h1>
+
+        <p>
+            Fragancia cálida con canela, vainilla y ámbar.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- SLIDE -->
+
+<div class="swiper-slide hero-slide luxury">
+
+    <img class="hero-bg" src="assets/hero/9pm-wide.webp" alt="9PM Afnan">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            Afnan
+        </span>
+
+        <h1>9PM</h1>
+
+        <p>
+            Dulce y seductor, con manzana, vainilla y ámbar. Perfecto para la noche.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- NAVIGATION -->
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+
+<div class="swiper-pagination"></div>
+
+</div>
+
+</section>
+
+<!-- MARCAS -->
+
+<section class="categories" id="marcas">
+
+<h2>
+MARCAS
+</h2>
+
+<p style="text-align:center;color:#888;margin-bottom:40px;">Haz clic en una marca para ver sus perfumes</p>
+
+<div class="category-grid">
+
+<div class="category-card" data-filter="Afnan">
+
+<img src="assets/marcas/afnan.webp" alt="Afnan">
+
+<span>AFNAN</span>
+
+</div>
+
+<div class="category-card" data-filter="Lattafa">
+
+<img src="assets/marcas/lattafa.webp" alt="Lattafa">
+
+<span>LATTAFA</span>
+
+</div>
+
+<div class="category-card" data-filter="Rasasi">
+
+<img src="assets/marcas/rasasi.webp" alt="Rasasi">
+
+<span>RASASI</span>
+
+</div>
+
+<div class="category-card" data-filter="Armaf">
+
+<img src="assets/marcas/armaf.webp" alt="Armaf">
+
+<span>ARMAF</span>
+
+</div>
+
+<div class="category-card" data-filter="Rayhaan">
+
+<img src="assets/marcas/rayhaan.webp" alt="Rayhaan">
+
+<span>RAYHAAN</span>
+
+</div>
+
+<div class="category-card" data-filter="Maison Alhambra">
+
+<img src="assets/marcas/maison-alhambra.webp" alt="Maison Alhambra">
+
+<span>MAISON ALHAMBRA</span>
+
+</div>
+
+<div class="category-card" data-filter="French Avenue">
+
+<img src="assets/marcas/french-avenue.webp" alt="French Avenue">
+
+<span>FRENCH AVENUE</span>
+
+</div>
+
+<div class="category-card" data-filter="Dumont">
+
+<img src="assets/marcas/dumont.webp" alt="Dumont">
+
+<span>DUMONT</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTOS -->
+
+<section id="productos" class="products-section">
+
+<h2>
+Los más vendidos
+</h2>
+<p style="text-align:center;color:#888;margin-bottom:10px;">Los favoritos de nuestros clientes</p>
+
+<div class="swiper productsSwiper">
+    <div class="swiper-wrapper" id="products-container"></div>
+</div>
+
+</section>
+
+<!-- BANNERS -->
+
+<section class="promo-banners">
+
+<div class="banner">
+
+<div class="banner-content">
+
+<h2>
+Descubre tu próxima fragancia
+</h2>
+
+<p>Perfumes árabes 100% originales</p>
+
+<button onclick="window.location.href='catalogo'">
+Ver Catálogo
+</button>
+
+</div>
+
+<img class="banner-img" src="assets/perfumes/khamrah.webp" alt="Khamrah, Lattafa">
+
+</div>
+
+<div class="banner red">
+
+<div class="banner-content">
+
+<h2>
+¿No sabes cuál elegir?
+</h2>
+
+<p>Te ayudamos a encontrar tu fragancia ideal</p>
+
+<button onclick="window.open('https://wa.me/51936751504?text=Hola%2C%20%C2%BFme%20ayudan%20a%20elegir%20mi%20pr%C3%B3xima%20fragancia%3F','_blank')">
+Escríbenos por WhatsApp
+</button>
+
+</div>
+
+<img class="banner-img" src="assets/perfumes/9pm.webp" alt="9PM, Afnan">
+
+</div>
+
+</section>
+
+<!-- RESEÑAS DE CLIENTES -->
+<!-- Las 3 reseñas de abajo son DE EJEMPLO para mostrar el diseño. Reemplazar con reseñas reales de clientes antes de publicar. -->
+
+<section class="reviews" id="resenas">
+
+<span class="reviews-eyebrow">Reseñas de clientes</span>
+
+<h2>Lo que dicen nuestros clientes</h2>
+
+<p class="reviews-subtitle">La experiencia de quienes ya encontraron su fragancia en Liv Ascent Parfum.</p>
+
+<div class="reviews-grid">
+
+<article class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-text">"El 9PM Night Out es mi favorito, dura toda la noche y varias veces me han preguntado qué perfume uso. El pedido llegó rápido y muy bien empacado."</p>
+<div class="review-product"><img src="assets/perfumes/9pm-night-out.webp" alt="9PM Night Out Afnan"></div>
+<div class="review-who">
+<span class="review-avatar">C</span>
+<div>
+<span class="review-name">Carlos M.</span>
+<span class="review-meta">Cliente de Ica</span>
+</div>
+</div>
+</article>
+
+<article class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-text">"Pedí el Vulcan Baie por WhatsApp, me asesoraron súper bien y llegó en dos días. Huele increíble, dulce pero elegante. Lo volvería a comprar sin dudarlo."</p>
+<div class="review-product"><img class="review-lower" src="assets/perfumes/vulcan-baie.webp" alt="Vulcan Baie French Avenue"></div>
+<div class="review-who">
+<span class="review-avatar">M</span>
+<div>
+<span class="review-name">María F.</span>
+<span class="review-meta">Cliente de Ayacucho</span>
+</div>
+</div>
+</article>
+
+<article class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-text">"El Sublime es intenso y elegante, dura muchísimo. Ya es el tercer perfume que compro aquí, siempre originales y a buen precio."</p>
+<div class="review-product"><img src="assets/perfumes/badee-al-oud-sublime.webp" alt="Badee Al Oud Sublime Lattafa"></div>
+<div class="review-who">
+<span class="review-avatar">D</span>
+<div>
+<span class="review-name">Diego R.</span>
+<span class="review-meta">Cliente de Lima</span>
+</div>
+</div>
+</article>
+
+</div>
+
+<p class="reviews-cta">¿Ya compraste en Liv? <a href="https://wa.me/51936751504?text=Hola%20Liv%20Ascent%20Parfum%2C%20quiero%20dejar%20mi%20rese%C3%B1a" target="_blank" rel="noopener">Cuéntanos tu experiencia por WhatsApp →</a></p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-container">
+
+    <div class="footer-brand">
+        <img class="footer-logo-img" src="assets/logo/logo-lockup.webp" alt="Liv Ascent Parfum">
+        <p class="slogan">Eleva tu esencia</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Soporte</h3>
+        <ul class="footer-links">
+            <li><a href="https://wa.me/51936751504" target="_blank" rel="noopener">Soporte 24/7</a></li>
+            <li><a href="envios-devoluciones">Envíos a todo el Perú</a></li>
+            <li><a href="mailto:livascent.pe@gmail.com">livascent.pe@gmail.com</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h3>Ayuda</h3>
+        <ul class="footer-links">
+            <li><a href="preguntas-frecuentes">Preguntas frecuentes</a></li>
+            <li><a href="envios-devoluciones">Cambios y devoluciones</a></li>
+            <li><a href="terminos-condiciones">Términos y condiciones</a></li>
+            <li><a href="politica-privacidad">Política de privacidad</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61596367331043" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://www.instagram.com/livascent.pe/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.tiktok.com/@livascent.pe" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+    </div>
+
+    <div class="footer-help">
+        <a class="footer-help-card" href="https://wa.me/51936751504?text=Hola%20Liv%20Ascent%20Parfum%2C%20necesito%20ayuda" target="_blank" rel="noopener">
+            <span class="footer-help-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
+            <span>
+                <strong>¿Necesitas ayuda?</strong>
+                <small>Escríbenos por WhatsApp</small>
+            </span>
+        </a>
+        <p class="footer-peru"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 8.5c0 5.25 7 13 7 13s7-7.75 7-13C19 5.13 15.87 2 12 2zm0 9.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg><span><strong>LIV ASCENT PARFUM</strong><br>Ica, Perú</span></p>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    <span>© 2026 LIV ASCENT PARFUM. Todos los derechos reservados.</span>
+    <span class="footer-gold-line"></span>
+    <span class="footer-tagline">Fragancias que dejan huella.</span>
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOTANTE -->
+<a class="whatsapp" href="https://wa.me/51936751504?text=Hola%20Liv%20Ascent%20Parfum%2C%20quiero%20pedir%20un%20perfume" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- CARRITO -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Carrito de compras">
+    <div class="cart-header">
+        <div class="cart-title-wrap">
+            <span class="cart-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+            <div>
+                <h3>BOLSA DE FRAGANCIAS</h3>
+                <p class="cart-subtitle">Liv Ascent Parfum Oficial</p>
+            </div>
+        </div>
+        <div class="cart-header-right">
+            <button class="cart-close" id="cart-close-btn" type="button" aria-label="Cerrar carrito">✖</button>
+        </div>
+    </div>
+    <div class="cart-count-bar"><svg class="count-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> Tienes <span class="cart-count-badge" id="cart-count-badge">0 frascos</span> en tu bolsa</div>
+    <div id="cart-items"></div>
+    <div class="cart-footer" id="cart-footer">
+        <div class="cart-totals">
+            <div class="totals-row"><span>Subtotal neto</span><span id="cart-subtotal">S/ 0.00</span></div>
+            <div class="totals-row"><span>IGV (18%)</span><span id="cart-igv">S/ 0.00</span></div>
+            <div class="totals-row total-row"><span>Total estimado</span><span id="cart-total">S/ 0.00</span></div>
+        </div>
+        <button class="buy-now-btn" id="buy-now-btn" type="button" onclick="buyNow()">Comprar ya</button>
+        <button class="advisor-btn" id="advisor-btn" type="button" onclick="buyWithAdvisor()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Comprar con asesor</button>
+        <p class="cart-note">🛡️ 100% Perfumes Originales • Batch Code Verificable.</p>
+    </div>
+</aside>
+
+<!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="js/carousel.js"></script>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/mobile-menu.js"></script>
+
+</body>
+
+</html>
