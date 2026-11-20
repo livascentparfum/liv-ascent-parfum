@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://livascentparfum.com/sitemap.xml
